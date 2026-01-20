@@ -1,17 +1,11 @@
 # test
 from builtins import ValueError
 from player import Player
-import render
+from render import Board
 
-board = [
-        ["#", "#", "#"],
-        ['#', '#', '#'],
-        ["#", "#", "#"]
-    ]
 def main():
     print("Welcome to TicTacToe Fucker")
-    caller = render.Board()
-
+    caller = Board()
 
     caller.render_board("_")
     print("-" * 50)
@@ -22,8 +16,8 @@ def main():
     if sp.isdigit() and int(sp) == 1:
         print("Step off")
         
-        p1 = Player.Player(1)
-        p2 = Player.Player(2)
+        p1 = Player(1)
+        p2 = Player(2)
         while True:
             pass
     else:
