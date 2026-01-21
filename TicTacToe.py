@@ -1,9 +1,10 @@
 # test
 from builtins import ValueError
-from player import Player
 from render import Board
 
+# game execution flow
 def main():
+    # NEXT STEPS
     print("Welcome to TicTacToe Fuckers")
     caller = Board()
 
@@ -16,8 +17,8 @@ def main():
     if sp.isdigit() and int(sp) == 1:
         print("Step off")
         
-        p1 = Player(1)
-        p2 = Player(2)
+        # production note, I may have the win check function only execute after one player has made at least 3 moves, in which case
+        # I might need a Player class, more to follow
         while True:
             choice = input("Player 1 make your move: ")
             caller.render_board("X", int(choice))
